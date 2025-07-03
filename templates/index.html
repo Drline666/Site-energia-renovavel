@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Perguntas sobre Energia</title>
+</head>
+<body>
+    <h1>Faça sua pergunta sobre energia</h1>
+    <form method="POST">
+        <input type="text" name="pergunta" placeholder="Digite sua pergunta aqui..." size="60" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if resposta %}
+        <p><strong>Resposta:</strong> {{ resposta }}</p>
+    {% endif %}
+</body>
+</html>
+
+
