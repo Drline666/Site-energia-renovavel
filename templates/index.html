@@ -1,20 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Perguntas sobre Energia</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecoresponde</title>
+
+  <!-- Estilo personalizado -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+    body{
+      font-family:'Luckiest+Guy';
+      font-size: 20px;
+      text-transform: uppercase;
+      background-color: #000;
+      color: #fff;
+      margin:0;
+      padding:0;
+    }
+    h1{
+      color: #00ff00;
+      font-size:35px
+      padding:10px;
+      margin:10px;
+    }
+    .content{
+      margin:10px;
+    }
+    .info{
+      color: #ff00ff;
+    }
+  </style>
 </head>
 <body>
-    <h1>Faça sua pergunta sobre energia</h1>
-    <form method="POST">
-        <input type="text" name="pergunta" placeholder="Digite sua pergunta aqui..." size="60" required>
-        <button type="submit">Enviar</button>
-    </form>
+  <h1>Ecoresponde!</h1>
 
-    {% if resposta %}
-        <p><strong>Resposta:</strong> {{ resposta }}</p>
-    {% endif %}
+  <div class="content">
+    <p>Bem-vindo ao <span class="info">Ecoresponde</span>, sua plataforma de perguntas inteligentes.</p>
+    <p>Aqui você pode conversar com nosso <span class="info">bot inteligente</span>  <br>
+      e tirar dúvidas sobre o meio ambiente e sustentabilidade.</p>
+   <img src="{{ url_for('static', filename='img/plant.png') }}"
+     alt="Imagem de planta"
+     style="width: 600px; border-radius: 10px;">
+
+  </div>
+  
+
+  <!-- Botpress Widget -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js" defer></script>
+  <script src="https://files.bpcontent.cloud/2025/07/14/22/20250714222601-J6W42062.js" defer></script>
+
 </body>
 </html>
+
+
 
 
